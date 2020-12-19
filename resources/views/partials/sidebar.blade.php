@@ -27,11 +27,7 @@
                             <i class="menu-icon icon-user"></i><span>Lotteries</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="{{url('/admin/winners')}}">
-                            <i class="menu-icon icon-user"></i><span>Games</span>
-                        </a>
-                    </li>
+                   
                     <li>
                         <a href="{{url('/admin/winners')}}">
                             <i class="menu-icon icon-user"></i><span>Winners</span>
