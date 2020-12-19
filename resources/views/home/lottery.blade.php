@@ -66,7 +66,16 @@
                     <img width="80" class="mx-auto mt-3 mb-3"  src="{{asset('/images/icon/aw.png')}}" alt="">
                     <div class="lotto-title">{{$lotto->title}}</div>
                     <div class="lotto-price">{{currency_format('NGN', $lotto->price)}}</div>
+                    @php
+                          $mytime = strtotime(Carbon\Carbon::now());
+                        // echo $mytime;
+                    @endphp
+                    @if ($mytime >= strtotime( $lotto->enddate ))
+                    
+                    <span  class="btn btn-lg btn-danger">Expired</span>
+                    @else
                     <a href="{{url('/checkout/'.$lotto->code)}}" class="btn btn-lg btn-danger">Buy A Ticket Now!</a>
+                    @endif
                     <br>
                     <br>
                     <div class="card text-center mt-2 mb-2 py-3 text-white d-flex justify-content-center" style="background-color: rgba(3, 14, 114, 0.863)">

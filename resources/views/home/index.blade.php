@@ -36,7 +36,15 @@
                                         <p class="card-text">Draw Date: {{datetime($lotto->enddate)}}</p>
                                     </div>
                                     <br>
-                                    <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong> Play Now! For </strong>₦1500</a>
+                                    @php
+                                         $mytime = strtotime(Carbon\Carbon::now());
+                                        // echo $mytime;
+                                    @endphp
+                                    @if ($mytime >= strtotime( $lotto->enddate ) )
+                                        <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong> Expired  </strong></a>
+                                    @else
+                                        <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong> Play Now! For </strong>₦1500</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>

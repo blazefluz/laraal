@@ -56,7 +56,7 @@
                                                         <td>{{date("d, M Y", strtotime($lotto->enddate))}}</td>
                                                         @php
                                                             $mytime = strtotime(Carbon\Carbon::now());
-                                                            echo $mytime;
+                                                            // echo $mytime;
                                                         @endphp
                                                         <td>{!!(strtotime( $lotto->enddate ) <= $mytime) ? '<a href="'.url('/admin/draw/'.$lotto->code).'" class="btn-sm btn-success">Play</a>' : '<span class="btn-sm btn-danger">disabled</span>'!!}</td>
                                                         <td>{!!(strtotime( $lotto->enddate ) >= $mytime) ? '<span class="btn-sm btn-success">Active</span>' : '<span class="btn-sm btn-danger">Expired</span>'!!}</td>
