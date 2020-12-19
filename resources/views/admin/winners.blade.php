@@ -22,6 +22,8 @@
                                                     <tr>
                                                         <th>#</th>
                                                         <th>Name</th>
+                                                        <th>Phone</th>
+                                                        <th>email</th>
                                                         <th>Game ID</th>
                                                         <th>Ticket ID</th>
                                                         <th>Status</th>
@@ -36,8 +38,14 @@
                                                     @foreach ($winners as $winner)
                                                         <tr>
                                                             <td >{{$i++}}</td>
-                                                            <td>{{$winner->user_id}}</td>
-                                                            <td>{{$winner->game_id}} </td>
+                                                            @php
+                                                                $data = DB::table('users')->where('id',$winner->user_id)->first();
+                                                                $lottoData= DB::table('lotteries')->where('id',$winner->game_id)->first();
+                                                            @endphp
+                                                            <td>{{$data->first_name}} {{$data->last_name}}</td>
+                                                            <td>{{$data->phone}} </td>
+                                                            <td>{{$data->email}} </td>
+                                                            <td>{{$lottoData->code}} </td>
                                                             <td>{{$winner->ticket_id}}</td>
                                                     
                                                             <td>{!!($winner->status == 1) ? '<span class="btn-sm btn-success">Eligble</span>' : '<span class="btn-sm btn-danger">Not Eligible</span>'!!}</td>
