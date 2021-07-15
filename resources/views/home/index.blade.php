@@ -30,7 +30,7 @@
                                 <div class="card-img-overlay text-center" style="transform: translateZ(20px)">
                                     <img width="80" class="mx-auto"  src="{{asset('/images/icon/aw.png')}}" alt="">
                                     <div class="card-body mt-2" style="background: rgba(3, 12, 22, 0.71);">
-                                        <div class="corner-ribbon bottom-left sticky orange">{{currency_format('ngn', $lotto->price)}}</div>
+                                        <div class="corner-ribbon bottom-left sticky orange">{{currency_format('NGN', $lotto->price)}}</div>
                                         <h3 class="card-title" style="font-size: 100%; text-transform: uppercase">{{$lotto->title}}</h3>
                                         {{-- <p class="card-text">This is a wider card with  This content is a little bit longer.</p> --}}
                                         <p class="card-text">Draw Date: {{datetime($lotto->enddate)}}</p>
