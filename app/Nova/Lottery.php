@@ -12,6 +12,7 @@ use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Select;
 
 class Lottery extends Resource
 {
@@ -55,8 +56,11 @@ class Lottery extends Resource
 
             Text::make('Code') ->sortable(),
 
-            Text::make('Category')
-            ->sortable(),
+            Select::make('Category')->options([
+                'General' => 'General',
+                'VIP' => 'VIP',
+                
+            ])->displayUsingLabels(),
 
             Number::make('Price'),
             Number::make('Max Play'),
@@ -65,6 +69,11 @@ class Lottery extends Resource
             Image::make('Icon Img')->disk('userimages')->maxWidth(100),
             Date::make('Start Date','startDate'),
             Date::make('End Date','endDate'),
+            Select::make('Status')->options([
+                1 => 'Active',
+                2 => 'Disabled',
+                
+            ])->displayUsingLabels(),
             Textarea::make('Desc'),
         ];
     }
