@@ -66,7 +66,7 @@
                     <img width="80" class="mx-auto mt-3 mb-3"  src="{{asset('/images/icon/aw.png')}}" alt="">
                     <div class="lotto-title">{{$lotto->title}}</div>
                     <div class="lotto-price">{{currency_format('NGN', $lotto->price)}}</div>
-                    @if ($lotto->status >= 2)
+                    @if ($lotto->status == 1)
                         
                     <a href="{{url('/checkout/'.$lotto->code) }}" class="btn btn-lg btn-danger">Buy A Ticket Now!</a>
                     @else
