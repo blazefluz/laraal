@@ -75,7 +75,7 @@ class Lottery extends Resource
                 2 => 'Disabled',
                 
             ])->displayUsingLabels(),
-            NovaTinyMCE::make('Desc'),
+            Textarea::make('Desc'),
         ];
     }
 
