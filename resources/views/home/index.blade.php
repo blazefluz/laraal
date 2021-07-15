@@ -91,7 +91,7 @@
             slidesToScroll: 2,
             autoplay: true,
             centerMode: true,
-            // variableWidth: true,
+            variableWidth: true,
             centerPadding: '60px',
             infinite: true,
             autoplaySpeed: 5000,
