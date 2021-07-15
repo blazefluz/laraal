@@ -13,6 +13,7 @@ use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Select;
+use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 
 class Lottery extends Resource
 {
@@ -74,7 +75,7 @@ class Lottery extends Resource
                 2 => 'Disabled',
                 
             ])->displayUsingLabels(),
-            Textarea::make('Desc'),
+            NovaTinyMCE::make('Desc'),
         ];
     }
 

@@ -26,12 +26,12 @@ class ComposerStaticInitd7c0adaa96297ab6d5850bbd92fe0d36
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '34122c0574b76bf21c9a8db62b5b9cf3' => __DIR__ . '/..' . '/cakephp/chronos/src/carbon_compat.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'ed33d19cba977f2a7e321f120d94a872' => __DIR__ . '/..' . '/spatie/once/src/functions.php',
-        '34122c0574b76bf21c9a8db62b5b9cf3' => __DIR__ . '/..' . '/cakephp/chronos/src/carbon_compat.php',
         '0d8253363903f0ac7b0978dcde4e28a0' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/helpers.php',
         'bab4ed692c1fd3872849227e2a85791e' => __DIR__ . '/..' . '/unicodeveloper/laravel-paystack/src/Support/helpers.php',
         'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
@@ -157,6 +157,7 @@ class ComposerStaticInitd7c0adaa96297ab6d5850bbd92fe0d36
         ),
         'E' => 
         array (
+            'Emilianotisato\\NovaTinyMCE\\' => 27,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -443,6 +444,10 @@ class ComposerStaticInitd7c0adaa96297ab6d5850bbd92fe0d36
         array (
             0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
+        'Emilianotisato\\NovaTinyMCE\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -553,11 +558,16 @@ class ComposerStaticInitd7c0adaa96297ab6d5850bbd92fe0d36
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Lottery' => __DIR__ . '/../..' . '/app/Lottery.php',
         'App\\Mail\\customerMail' => __DIR__ . '/../..' . '/app/Mail/customerMail.php',
+        'App\\Nova\\Lottery' => __DIR__ . '/../..' . '/app/Nova/Lottery.php',
+        'App\\Nova\\Resource' => __DIR__ . '/../..' . '/app/Nova/Resource.php',
+        'App\\Nova\\Ticket' => __DIR__ . '/../..' . '/app/Nova/Ticket.php',
+        'App\\Nova\\User' => __DIR__ . '/../..' . '/app/Nova/User.php',
         'App\\Payments' => __DIR__ . '/../..' . '/app/Payments.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\NovaServiceProvider' => __DIR__ . '/../..' . '/app/Providers/NovaServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Traits\\UploadTrait' => __DIR__ . '/../..' . '/app/Traits/UploadTrait.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
@@ -1158,6 +1168,9 @@ class ComposerStaticInitd7c0adaa96297ab6d5850bbd92fe0d36
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'Emilianotisato\\NovaTinyMCE\\Console\\SupportFileManagerCommand' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/Console/SupportFileManagerCommand.php',
+        'Emilianotisato\\NovaTinyMCE\\FieldServiceProvider' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/FieldServiceProvider.php',
+        'Emilianotisato\\NovaTinyMCE\\NovaTinyMCE' => __DIR__ . '/..' . '/emilianotisato/nova-tinymce/src/NovaTinyMCE.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/Calculator/Inn.php',

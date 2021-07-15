@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => 'ea19f7f758e876d8aa346ff1c7d834da7bac5f14',
+    'reference' => '30f7a124552488b5ca9df49baf2493375650c930',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -156,6 +156,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '0dbf5d78455d4d6a41d186da50adc1122ec066f4',
+    ),
+    'emilianotisato/nova-tinymce' => 
+    array (
+      'pretty_version' => '1.2.1',
+      'version' => '1.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c57240424d07033600c65683a103a7d44fdae1f4',
     ),
     'erusev/parsedown' => 
     array (
@@ -466,12 +475,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => 'ea19f7f758e876d8aa346ff1c7d834da7bac5f14',
+      'reference' => '30f7a124552488b5ca9df49baf2493375650c930',
     ),
     'laravel/nova' => 
     array (
