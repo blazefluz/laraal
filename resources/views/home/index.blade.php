@@ -90,7 +90,7 @@
             slidesToShow: 3,
             slidesToScroll: 2,
             autoplay: true,
-            centerMode: true,
+            // centerMode: true,
             variableWidth: true,
             centerPadding: '60px',
             infinite: true,
