@@ -60,7 +60,7 @@
           {{-- <div class="card p-3" style="background-color: #b4b2af59"> --}}
               <div class="row">
                   <div class="col-md-6 d-flex justify-content-center">
-                     <img class="img-fluid " height="300" src="{{asset('/images/'.$lotto->banner_img)}}" alt="Card image">
+                     <img class="img-fluid "  src="{{asset('/images/'.$lotto->banner_img)}}" alt="Card image">
                   </div>
                   <div class="col-md-6 text-center">
                     <img width="80" class="mx-auto mt-3 mb-3"  src="{{asset('/images/'.$lotto->icon_img)}}" alt="">
