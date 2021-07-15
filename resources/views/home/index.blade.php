@@ -36,7 +36,10 @@
                                         <p class="card-text">Draw Date: {{datetime($lotto->enddate)}}</p>
                                     </div>
                                     <br>
-                                    <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong> Buy Ticket Now! </strong></a>
+                                    @php
+                                        $date = Carbon\Carbon::now()->toDateTimeString();
+                                    @endphp
+                                    <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong>{{ datetime($lotto->enddate) < $date ? "Buy Ticket Now!" : "expired" }}</strong></a>
                                 </div>
                             </div>
                         </div>
@@ -60,7 +63,7 @@
                                 <div class="card-body p-2 text-center">
                                  
                                             <img width="60"  src="{{asset('/images/icon/aw.png')}}" alt="">
-                                            <span >{{ $winner->username }} d</span>
+                                            <span >{{ $winner->last_name }}</span>
                                        
                                 </div>
                             </div>

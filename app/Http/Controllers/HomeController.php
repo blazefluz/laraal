@@ -19,8 +19,8 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $lottos =  DB::table("lotteries")->get();
-        $winners =  DB::table("winners")->select('winners.user_id', 'winners.game_id', 'users.username')
+        $lottos =  DB::table("lotteries")->orderBy('created_at','desc')->get();
+        $winners =  DB::table("winners")->select('winners.user_id', 'winners.game_id', 'users.username', 'users.last_name')
         ->join('users', 'users.id','=','winners.user_id')->get();
         return view('home.index', compact('lottos','user', 'winners'));
     }
