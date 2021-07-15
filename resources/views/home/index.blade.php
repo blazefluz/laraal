@@ -37,9 +37,10 @@
                                     </div>
                                     <br>
                                     @php
-                                        $date = Carbon\Carbon::now()->toDateTimeString();
+                                        $date = Carbon\Carbon::now();
+                                       
                                     @endphp
-                                    <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong>{{ strtotime($lotto->enddate) < $date ? "Buy Ticket Now!" : "expired" }}</strong></a>
+                                    <a href="{{url('lottery/'.$lotto->code)}}" class="btn btn-warning btn-block"><strong>{{ strtotime($lotto->enddate) >= strtotime($date) ? "Buy Ticket Now!" : "expired" }}</strong></a>
                                 </div>
                             </div>
                         </div>
