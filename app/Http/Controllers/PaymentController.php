@@ -57,7 +57,7 @@ class PaymentController extends Controller
         ]);
         Tickets::create([
                 'user_id' => $user->id,
-                'amount' => $paymentDetails['data']['amount'],
+                'amount' => $paymentDetails['data']['amount'] / 100,
                 'game_id' => $paymentDetails['data']['metadata']['game_id'],
                 'ticket_code' => $ticket,
                 'payment_method' => 'card',
@@ -69,12 +69,12 @@ class PaymentController extends Controller
         array(
                 'name' => $user->first_name,
                 'email' => $user->email,
-                'subject' => "CM-petas Awoof Ticket",
-                'user_message' => 'The following code '.$ticket.'is your ticket for the raffle draw'
+                'subject' => "CM-petas Lotto Ticket",
+                'user_message' => 'The following code <br>'.$ticket.' <br>is your ticket for the raffle draw'
             ), function($message)
         {
             $message->from('ticket@cmpetas.com');
-            $message->to(Auth::user()->email)->subject('CM Awoof Land Ticket');
+            $message->to(Auth::user()->email)->subject('CM Lotto Ticket');
         });
       
         return redirect('/account/game')->with('message', ' Your payment successfully');;
@@ -103,13 +103,15 @@ class PaymentController extends Controller
               
         ]);
         Mail::send('emails.test',
-        array( 'name' => $user->first_name,
+        array(
+                'name' => $user->first_name,
                 'email' => $user->email,
-                'subject' => "CM-petas Awoof Ticket",
-                'user_message' => 'The following code '.$ticket.'is your ticket for the raffle draw'), function($message)
+                'subject' => "CM-petas Lotto Ticket",
+                'user_message' => 'The following code <br>'.$ticket.' <br>is your ticket for the raffle draw'
+            ), function($message)
         {
             $message->from('ticket@cmpetas.com');
-            $message->to(Auth::user()->email)->subject('CM Awoof Land Ticket');
+            $message->to(Auth::user()->email)->subject('CM Lotto Ticket');
         });
       
         return redirect('/account/game')->with('message', ' Your payment successfully');

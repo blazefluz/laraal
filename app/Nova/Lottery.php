@@ -11,6 +11,7 @@ use Laravel\Nova\Fields\Currency;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Date;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Fields\DateTime;
 use Laravel\Nova\Fields\Select;
 use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
@@ -75,7 +76,7 @@ class Lottery extends Resource
                 2 => 'Disabled',
                 
             ])->displayUsingLabels(),
-            Textarea::make('Desc'),
+            Trix::make('Desc'),
         ];
     }
 

@@ -36,4 +36,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function tickets(){
+        return $this->belongsTo(User::class, 'user_id' );
+    }
 }

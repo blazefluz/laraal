@@ -9,27 +9,24 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\HasMany;
+use Laravel\Nova\Fields\Select;
 
-class Ticket extends Resource
+class Payments extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = 'App\Tickets';
+    public static $model = 'App\Payments';
 
     /**
      * The single value that should be used to represent the resource when being displayed.
      *
      * @var string
      */
-    public static $title = 'first_name';
+    public static $title = 'id';
 
-    public function title()
-    {
-        return $this->first_name;
-    }
     /**
      * The columns that should be searched.
      *
@@ -51,8 +48,16 @@ class Ticket extends Resource
             ID::make()->sortable(),
             BelongsTo::make('User', 'user', User::class),
             // BelongsTo::make('User', 'tickets', Ticket::class),
-            Text::make('Ticket Code') ->sortable(),
-            Text::make('Payment Method') ->sortable(),
+            Text::make('Payment Method', 'subscription') ->sortable(),
+            Text::make('Bank Name') ->nullable(),
+            Text::make('Amount', 'price') ->nullable(),
+            Text::make('Teller', 'Teller_img') ->nullable(),
+            Select::make('Status')->options([
+                'Pending' => 'Pending',
+                'Success' => 'Success',
+                
+            ])->displayUsingLabels(),
+            Text::make('reference') ->nullable(),
             Date::make('Created At') ->sortable(),
         ];
     }

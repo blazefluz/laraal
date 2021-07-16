@@ -6,6 +6,10 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use App\Nova\Metrics\UserCount;
+use App\Nova\Metrics\LottoComparism;
+use App\Nova\Metrics\LotteryCount;
+use App\Nova\Metrics\TicketTrends;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -56,7 +60,11 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-            new Help,
+            // new Help,
+            new UserCount,
+            new TicketTrends,
+            new LotteryCount,
+            new LottoComparism()
         ];
     }
 
