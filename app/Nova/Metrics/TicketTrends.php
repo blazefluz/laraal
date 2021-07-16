@@ -4,7 +4,7 @@ namespace App\Nova\Metrics;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Metrics\Trend;
-use App\tickets;
+use App\Tickets;
 
 class TicketTrends extends Trend
 {
@@ -16,7 +16,7 @@ class TicketTrends extends Trend
      */
     public function calculate(Request $request)
     {
-        return $this->countByDays($request, tickets::class);
+        return $this->countByDays($request, Tickets::class);
     }
 
     /**
