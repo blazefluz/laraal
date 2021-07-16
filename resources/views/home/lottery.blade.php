@@ -106,7 +106,7 @@
                   
                       <li><strong>2. </strong>You must be 18 years and above.</li>
                       <li><strong>2. </strong>Noboby can claim your price for you.</li>
-                      <li><strong>3. </strong> Your phone number must be valid. If the organizers is unable to you after two (2) days. The prie will be transfered to another winner.</li>
+                      <li><strong>3. </strong> Your phone number must be valid. If the organizers is unable to you after two (2) days. The price will be transfered to another winner.</li>
                       <li><strong>4. </strong>Staffs and partners are not allowed to play this game</li>
                     </ul>
                   </div>
