@@ -91,19 +91,23 @@
               <div class="card mt-3" >
                   <div class="card-body">
                     <h3>Description</h3>
-                    <p>{{$lotto->desc}}</p>
+                    <p>{!!$lotto->desc!!}</p>
                     <h3>How do I play?</h3>
                     <ul>
-                      <li>Click on pay</li>
-                      <li>Fund account</li>
-                      <li>Buy ticket and qet qualifyed for a raffle draw.</li>
+                      <li><strong>1. </strong> Click on pay</li>
+                      <li><strong>2. </strong> Fund account</li>
+                      <li><strong>3. </strong> Buy ticket and get qualifyed for a raffle draw.</li>
+                      <li><strong>4. </strong>If your ticket number is selected you will be called to 
+                        claim the price. <br>   For game rules and details
+                      please click on the rules section below <br></li>
                     </ul>
-                    <h3>How do win</h3>
+                    <h3>Game Rules</h3>
                     <ul>
-                      <li>If your ticket number is selected you will be called to claim the price. <br> For game rules and details
-                      please click on the rules section below</li>
-                      <li>Fund account</li>
-                      <li>Buy ticket and qet qualifyed for a raffle draw.</li>
+                  
+                      <li><strong>2. </strong>You must be 18 years and above.</li>
+                      <li><strong>2. </strong>Noboby can claim your price for you.</li>
+                      <li><strong>3. </strong> Your phone number must be valid. If the organizers is unable to you after two (2) days. The prie will be transfered to another winner.</li>
+                      <li><strong>4. </strong>Staffs and partners are not allowed to play this game</li>
                     </ul>
                   </div>
               </div>
