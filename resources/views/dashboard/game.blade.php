@@ -67,7 +67,9 @@
                       </ul>
                       <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                          <table class="table table-responsive">
+                        <div class=" table-responsive">
+
+                          <table class="table ">
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -99,6 +101,7 @@
                               @endforeach
                             </tbody>
                           </table>
+                        </div>
                         </div>
                         
                        

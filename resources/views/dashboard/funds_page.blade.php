@@ -77,35 +77,38 @@
                     <div class="row mt-5 justify-content-center">
                       <h4>Payment History</h4>
                       <div class="col-md-12 justify-content-center">
-                        <table class="table table-responsive">
-                          <thead>
-                              <tr>
-                                  <th>#</th>
-                                  <th>Payment Date</th>
-                                  <th>Payment Method</th>
-                                  <th>Price</th>
-                                  <th>reference</th>
-                                  <th>Status</th>
-                              </tr>
-                         
-                          </thead>
-                          <tbody>
-                            @php
-                                $i = 1;
-                            @endphp
-                            @foreach ($payments as $item)
-                              <tr>
-                                <td>{{$i++}}</td>
-                                <td>{{datetime($item->created_at)}}</td>
-                                <td>{{$item->subscription}}</td>
-                                <td>{{currency_format('NGN',$item->price)}}</td>
-                                <td>{{$item->reference}}</td>
-                                <td>{{$item->status}}</td>
-                                {{-- <td><a class="btn btn-danger btn-sm" href="">Upload Teller</a></td> --}}
-                              </tr>
-                            @endforeach
-                          </tbody>
-                        </table>
+                        <div class=" table-responsive">
+
+                          <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Payment Date</th>
+                                    <th>Payment Method</th>
+                                    <th>Price</th>
+                                    <th>reference</th>
+                                    <th>Status</th>
+                                </tr>
+                           
+                            </thead>
+                            <tbody>
+                              @php
+                                  $i = 1;
+                              @endphp
+                              @foreach ($payments as $item)
+                                <tr>
+                                  <td>{{$i++}}</td>
+                                  <td>{{datetime($item->created_at)}}</td>
+                                  <td>{{$item->subscription}}</td>
+                                  <td>{{currency_format('NGN',$item->price)}}</td>
+                                  <td>{{$item->reference}}</td>
+                                  <td>{{$item->status}}</td>
+                                  {{-- <td><a class="btn btn-danger btn-sm" href="">Upload Teller</a></td> --}}
+                                </tr>
+                              @endforeach
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>

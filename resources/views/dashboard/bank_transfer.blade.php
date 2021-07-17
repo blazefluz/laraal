@@ -68,7 +68,8 @@
                       <div class="col-md-4">
                         <h2 class="p-2 " style="background-color: rgba(197, 193, 193, 0.774)">₦<span>{{$user->acc_bal == null ? '0.00': $user->acc_bal}}</span> </h2> 
                       </div>
-                      <div class="col-md-8">
+                      <br>
+                      <div class="col-md-12">
                          {!!$user->acc_bal == null ? '' : ' <a href='.url('/account/payment/bank/pay/'.$game_data->code).' class="btn btn-primary">Pay Now</a>'!!}
                       </div>
                     </div>
@@ -85,7 +86,7 @@
                         <div class="col-md-4" ><Strong>Account Name</Strong></div>
                         <div class="col-md-8" >CMPetas Global Services Nig Ltd</div>
                     </div>
-                    <h3>OR</h3>
+                    {{-- <h3>OR</h3>
                     <div class="row">
                         <div class="col-md-4" ><Strong>Bank Name:</Strong></div>
                         <div class="col-md-8" >Access bank</div>
@@ -97,7 +98,7 @@
                     <div class="row ">
                         <div class="col-md-4" ><Strong>Account Name</Strong></div>
                         <div class="col-md-8" >CMPetas Global Services Nig Ltd</div>
-                    </div>
+                    </div> --}}
                    
                     <div class="row mt-5">
                        
