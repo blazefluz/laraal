@@ -57,57 +57,45 @@
                 <hr>
                 <div class="row  mt-5">
                   <div class="col-md-12 d-flex justify-content-center">
-                    <div >
-                      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Game History</a>
-                        </li>
-                        
-                     
-                      </ul>
-                      <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class=" table-responsive">
-
-                          <table class="table ">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Game Title</th>
-                                    <th>Game Code</th>
-                                    <th>Ticket Id</th>
-                                    <th>Draw Date</th>
-                                    <th>Price</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
-                                    
-        
-                                </tr>
-                          
-                            </thead>
-                            <tbody>
-                              @foreach ($game_active as $item)
-                                <tr>
-                                  <td>1</td>
-                                  <td>{{$item->title}}</td>
-                                  <td>{{$item->code}}</td>
-                                  <td>{{$item->ticket_code}}</td>
-                                  <td>{{datetime($item->enddate)}}</td>
-                                  <td>{{currency_format('NGN',$item->price)}}</td>
-                                  <td>{{datetime($item->created_at)}}</td>
-                                  <td><span class=" btn btn-sm btn-success p-1 btn-rounded">{{$item->enddate > Carbon\Carbon::now() ? 'active' : 'completed'}}</span></td>
-                                  
-                                </tr>
-                              @endforeach
-                            </tbody>
-                          </table>
-                        </div>
-                        </div>
-                        
+                 
                        
-                      </div>
+                          <div class=" table-responsive">
+
+                            <table class="table ">
+                              <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>Game Title</th>
+                                      <th>Game Code</th>
+                                      <th>Ticket Id</th>
+                                      <th>Draw Date</th>
+                                      <th>Price</th>
+                                      <th>Date</th>
+                                      <th>Status</th>
+                                      
+          
+                                  </tr>
+                            
+                              </thead>
+                              <tbody>
+                                @foreach ($game_active as $item)
+                                  <tr>
+                                    <td>1</td>
+                                    <td>{{$item->title}}</td>
+                                    <td>{{$item->code}}</td>
+                                    <td>{{$item->ticket_code}}</td>
+                                    <td>{{datetime($item->enddate)}}</td>
+                                    <td>{{currency_format('NGN',$item->price)}}</td>
+                                    <td>{{datetime($item->created_at)}}</td>
+                                    <td><span class=" btn btn-sm btn-success p-1 btn-rounded">{{$item->enddate > Carbon\Carbon::now() ? 'active' : 'completed'}}</span></td>
+                                    
+                                  </tr>
+                                @endforeach
+                              </tbody>
+                            </table>
+                          </div>
                       
-                    </div>
+  
                   </div>
                 </div>
                 
